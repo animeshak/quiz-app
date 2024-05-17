@@ -2,8 +2,8 @@ import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import './App.css';
 import AdminPanel from './Components/AdminPanel';
 import Quiz from './Components/Quiz';
-import SignIn from "./Components/login/SignIn";
-
+import Authentication from "./Components/login/Authentication.js";
+import RegisterUser from "./Components/login/RegisterUser.js"
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   const route = createBrowserRouter([
     {
       path: "/",
-      element: <SignIn/>
+      element: <Authentication/>
     },
     {
       path: "/admin",
@@ -20,6 +20,10 @@ function App() {
     {
       path:"/quiz",
       element:<Quiz/>
+    },
+    {
+      path:"/register",
+      element:<RegisterUser/>
     }
   ])
 
